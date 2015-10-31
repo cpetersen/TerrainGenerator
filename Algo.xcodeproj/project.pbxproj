@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		536AFA951BE54FDD0091CDD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */; };
+		536AFA971BE54FDD0091CDD9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFA961BE54FDD0091CDD9 /* GameScene.swift */; };
+		536AFA991BE54FDD0091CDD9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 536AFA981BE54FDD0091CDD9 /* GameScene.sks */; };
+		536AFA9B1BE54FDD0091CDD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536AFA9A1BE54FDD0091CDD9 /* Assets.xcassets */; };
+		536AFA9E1BE54FDD0091CDD9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536AFA9C1BE54FDD0091CDD9 /* MainMenu.xib */; };
+		536AFAA91BE54FDD0091CDD9 /* AlgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAA81BE54FDD0091CDD9 /* AlgoTests.swift */; };
+		536AFAB41BE54FDD0091CDD9 /* AlgoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAB31BE54FDD0091CDD9 /* AlgoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		536AFAA51BE54FDD0091CDD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 536AFA891BE54FDC0091CDD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 536AFA901BE54FDC0091CDD9;
+			remoteInfo = Algo;
+		};
+		536AFAB01BE54FDD0091CDD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 536AFA891BE54FDC0091CDD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 536AFA901BE54FDC0091CDD9;
+			remoteInfo = Algo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		536AFA911BE54FDD0091CDD9 /* Algo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		536AFA961BE54FDD0091CDD9 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		536AFA981BE54FDD0091CDD9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		536AFA9A1BE54FDD0091CDD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		536AFA9D1BE54FDD0091CDD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		536AFA9F1BE54FDD0091CDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536AFAA41BE54FDD0091CDD9 /* AlgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		536AFAA81BE54FDD0091CDD9 /* AlgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoTests.swift; sourceTree = "<group>"; };
+		536AFAAA1BE54FDD0091CDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536AFAAF1BE54FDD0091CDD9 /* AlgoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		536AFAB31BE54FDD0091CDD9 /* AlgoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoUITests.swift; sourceTree = "<group>"; };
+		536AFAB51BE54FDD0091CDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		536AFA8E1BE54FDC0091CDD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536AFAA11BE54FDD0091CDD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536AFAAC1BE54FDD0091CDD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		536AFA881BE54FDC0091CDD9 = {
+			isa = PBXGroup;
+			children = (
+				536AFA931BE54FDD0091CDD9 /* Algo */,
+				536AFAA71BE54FDD0091CDD9 /* AlgoTests */,
+				536AFAB21BE54FDD0091CDD9 /* AlgoUITests */,
+				536AFA921BE54FDD0091CDD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		536AFA921BE54FDD0091CDD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				536AFA911BE54FDD0091CDD9 /* Algo.app */,
+				536AFAA41BE54FDD0091CDD9 /* AlgoTests.xctest */,
+				536AFAAF1BE54FDD0091CDD9 /* AlgoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		536AFA931BE54FDD0091CDD9 /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */,
+				536AFA961BE54FDD0091CDD9 /* GameScene.swift */,
+				536AFA981BE54FDD0091CDD9 /* GameScene.sks */,
+				536AFA9A1BE54FDD0091CDD9 /* Assets.xcassets */,
+				536AFA9C1BE54FDD0091CDD9 /* MainMenu.xib */,
+				536AFA9F1BE54FDD0091CDD9 /* Info.plist */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		536AFAA71BE54FDD0091CDD9 /* AlgoTests */ = {
+			isa = PBXGroup;
+			children = (
+				536AFAA81BE54FDD0091CDD9 /* AlgoTests.swift */,
+				536AFAAA1BE54FDD0091CDD9 /* Info.plist */,
+			);
+			path = AlgoTests;
+			sourceTree = "<group>";
+		};
+		536AFAB21BE54FDD0091CDD9 /* AlgoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				536AFAB31BE54FDD0091CDD9 /* AlgoUITests.swift */,
+				536AFAB51BE54FDD0091CDD9 /* Info.plist */,
+			);
+			path = AlgoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		536AFA901BE54FDC0091CDD9 /* Algo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536AFAB81BE54FDD0091CDD9 /* Build configuration list for PBXNativeTarget "Algo" */;
+			buildPhases = (
+				536AFA8D1BE54FDC0091CDD9 /* Sources */,
+				536AFA8E1BE54FDC0091CDD9 /* Frameworks */,
+				536AFA8F1BE54FDC0091CDD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Algo;
+			productName = Algo;
+			productReference = 536AFA911BE54FDD0091CDD9 /* Algo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		536AFAA31BE54FDD0091CDD9 /* AlgoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536AFABB1BE54FDD0091CDD9 /* Build configuration list for PBXNativeTarget "AlgoTests" */;
+			buildPhases = (
+				536AFAA01BE54FDD0091CDD9 /* Sources */,
+				536AFAA11BE54FDD0091CDD9 /* Frameworks */,
+				536AFAA21BE54FDD0091CDD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				536AFAA61BE54FDD0091CDD9 /* PBXTargetDependency */,
+			);
+			name = AlgoTests;
+			productName = AlgoTests;
+			productReference = 536AFAA41BE54FDD0091CDD9 /* AlgoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		536AFAAE1BE54FDD0091CDD9 /* AlgoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536AFABE1BE54FDD0091CDD9 /* Build configuration list for PBXNativeTarget "AlgoUITests" */;
+			buildPhases = (
+				536AFAAB1BE54FDD0091CDD9 /* Sources */,
+				536AFAAC1BE54FDD0091CDD9 /* Frameworks */,
+				536AFAAD1BE54FDD0091CDD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				536AFAB11BE54FDD0091CDD9 /* PBXTargetDependency */,
+			);
+			name = AlgoUITests;
+			productName = AlgoUITests;
+			productReference = 536AFAAF1BE54FDD0091CDD9 /* AlgoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		536AFA891BE54FDC0091CDD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = nestedset;
+				TargetAttributes = {
+					536AFA901BE54FDC0091CDD9 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					536AFAA31BE54FDD0091CDD9 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 536AFA901BE54FDC0091CDD9;
+					};
+					536AFAAE1BE54FDD0091CDD9 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 536AFA901BE54FDC0091CDD9;
+					};
+				};
+			};
+			buildConfigurationList = 536AFA8C1BE54FDC0091CDD9 /* Build configuration list for PBXProject "Algo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 536AFA881BE54FDC0091CDD9;
+			productRefGroup = 536AFA921BE54FDD0091CDD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				536AFA901BE54FDC0091CDD9 /* Algo */,
+				536AFAA31BE54FDD0091CDD9 /* AlgoTests */,
+				536AFAAE1BE54FDD0091CDD9 /* AlgoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		536AFA8F1BE54FDC0091CDD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536AFA9B1BE54FDD0091CDD9 /* Assets.xcassets in Resources */,
+				536AFA991BE54FDD0091CDD9 /* GameScene.sks in Resources */,
+				536AFA9E1BE54FDD0091CDD9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536AFAA21BE54FDD0091CDD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536AFAAD1BE54FDD0091CDD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		536AFA8D1BE54FDC0091CDD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536AFA971BE54FDD0091CDD9 /* GameScene.swift in Sources */,
+				536AFA951BE54FDD0091CDD9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536AFAA01BE54FDD0091CDD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536AFAA91BE54FDD0091CDD9 /* AlgoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536AFAAB1BE54FDD0091CDD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536AFAB41BE54FDD0091CDD9 /* AlgoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		536AFAA61BE54FDD0091CDD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 536AFA901BE54FDC0091CDD9 /* Algo */;
+			targetProxy = 536AFAA51BE54FDD0091CDD9 /* PBXContainerItemProxy */;
+		};
+		536AFAB11BE54FDD0091CDD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 536AFA901BE54FDC0091CDD9 /* Algo */;
+			targetProxy = 536AFAB01BE54FDD0091CDD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		536AFA9C1BE54FDD0091CDD9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536AFA9D1BE54FDD0091CDD9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		536AFAB61BE54FDD0091CDD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		536AFAB71BE54FDD0091CDD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		536AFAB91BE54FDD0091CDD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Algo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestedset.Algo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		536AFABA1BE54FDD0091CDD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Algo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestedset.Algo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		536AFABC1BE54FDD0091CDD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = AlgoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestedset.AlgoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algo.app/Contents/MacOS/Algo";
+			};
+			name = Debug;
+		};
+		536AFABD1BE54FDD0091CDD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AlgoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestedset.AlgoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Algo.app/Contents/MacOS/Algo";
+			};
+			name = Release;
+		};
+		536AFABF1BE54FDD0091CDD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = AlgoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestedset.AlgoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Algo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		536AFAC01BE54FDD0091CDD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AlgoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nestedset.AlgoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Algo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		536AFA8C1BE54FDC0091CDD9 /* Build configuration list for PBXProject "Algo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536AFAB61BE54FDD0091CDD9 /* Debug */,
+				536AFAB71BE54FDD0091CDD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		536AFAB81BE54FDD0091CDD9 /* Build configuration list for PBXNativeTarget "Algo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536AFAB91BE54FDD0091CDD9 /* Debug */,
+				536AFABA1BE54FDD0091CDD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		536AFABB1BE54FDD0091CDD9 /* Build configuration list for PBXNativeTarget "AlgoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536AFABC1BE54FDD0091CDD9 /* Debug */,
+				536AFABD1BE54FDD0091CDD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		536AFABE1BE54FDD0091CDD9 /* Build configuration list for PBXNativeTarget "AlgoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536AFABF1BE54FDD0091CDD9 /* Debug */,
+				536AFAC01BE54FDD0091CDD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 536AFA891BE54FDC0091CDD9 /* Project object */;
+}
