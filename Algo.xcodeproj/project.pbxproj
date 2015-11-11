@@ -14,6 +14,10 @@
 		536AFA9E1BE54FDD0091CDD9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536AFA9C1BE54FDD0091CDD9 /* MainMenu.xib */; };
 		536AFAA91BE54FDD0091CDD9 /* AlgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAA81BE54FDD0091CDD9 /* AlgoTests.swift */; };
 		536AFAB41BE54FDD0091CDD9 /* AlgoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAB31BE54FDD0091CDD9 /* AlgoUITests.swift */; };
+		536AFAC61BE55CD90091CDD9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAC51BE55CD90091CDD9 /* Tile.swift */; };
+		536AFAC81BEFCA4A0091CDD9 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAC71BEFCA4A0091CDD9 /* Camera.swift */; };
+		536AFACA1BEFCAEC0091CDD9 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAC91BEFCAEC0091CDD9 /* Map.swift */; };
+		536AFACC1BEFCBE30091CDD9 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFACB1BEFCBE30091CDD9 /* Coordinate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		536AFAAF1BE54FDD0091CDD9 /* AlgoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		536AFAB31BE54FDD0091CDD9 /* AlgoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoUITests.swift; sourceTree = "<group>"; };
 		536AFAB51BE54FDD0091CDD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536AFAC51BE55CD90091CDD9 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; tabWidth = 2; };
+		536AFAC71BEFCA4A0091CDD9 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		536AFAC91BEFCAEC0091CDD9 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		536AFACB1BEFCBE30091CDD9 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */,
+				536AFAC41BE55CC90091CDD9 /* Map */,
 				536AFA961BE54FDD0091CDD9 /* GameScene.swift */,
 				536AFA981BE54FDD0091CDD9 /* GameScene.sks */,
 				536AFA9A1BE54FDD0091CDD9 /* Assets.xcassets */,
@@ -123,6 +132,17 @@
 				536AFAB51BE54FDD0091CDD9 /* Info.plist */,
 			);
 			path = AlgoUITests;
+			sourceTree = "<group>";
+		};
+		536AFAC41BE55CC90091CDD9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				536AFAC51BE55CD90091CDD9 /* Tile.swift */,
+				536AFACB1BEFCBE30091CDD9 /* Coordinate.swift */,
+				536AFAC91BEFCAEC0091CDD9 /* Map.swift */,
+				536AFAC71BEFCA4A0091CDD9 /* Camera.swift */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536AFACA1BEFCAEC0091CDD9 /* Map.swift in Sources */,
+				536AFAC81BEFCA4A0091CDD9 /* Camera.swift in Sources */,
+				536AFAC61BE55CD90091CDD9 /* Tile.swift in Sources */,
 				536AFA971BE54FDD0091CDD9 /* GameScene.swift in Sources */,
 				536AFA951BE54FDD0091CDD9 /* AppDelegate.swift in Sources */,
+				536AFACC1BEFCBE30091CDD9 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
