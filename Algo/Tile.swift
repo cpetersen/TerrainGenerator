@@ -9,7 +9,7 @@
 import Foundation
 
 class Tile {
-  let height: CGFloat = 64
+  let height: CGFloat = 16
   var width: CGFloat { return (height*(sqrt(3.0)/2.0)) }
 
   var northOffset: CGPoint { return CGPoint(x: 0, y: (height/2.0)) }
@@ -31,16 +31,18 @@ class Tile {
     return CGPoint(x:x,y:y)
   }
 
-  func path(location: CGPoint) -> CGMutablePathRef {
+  func path(offset: CGPoint) -> CGMutablePathRef {
     let path:CGMutablePathRef = CGPathCreateMutable()
 
-    CGPathMoveToPoint(path, nil, location.x+northOffset.x, location.y+northOffset.y)
-    CGPathAddLineToPoint(path, nil, location.x+northwestOffset.x, location.y+northwestOffset.y)
-    CGPathAddLineToPoint(path, nil, location.x+southwestOffset.x, location.y+southwestOffset.y)
-    CGPathAddLineToPoint(path, nil, location.x+southOffset.x, location.y+southOffset.y)
-    CGPathAddLineToPoint(path, nil, location.x+southeastOffset.x, location.y+southeastOffset.y)
-    CGPathAddLineToPoint(path, nil, location.x+northeastOffset.x, location.y+northeastOffset.y)
-    CGPathAddLineToPoint(path, nil, location.x+southOffset.x, location.y+northOffset.y)
+    let offsetX: CGFloat = mapLocation().x + offset.x
+    let offsetY: CGFloat = mapLocation().y + offset.y
+    CGPathMoveToPoint(path, nil, offsetX+northOffset.x, offsetY+northOffset.y)
+    CGPathAddLineToPoint(path, nil, offsetX+northwestOffset.x, offsetY+northwestOffset.y)
+    CGPathAddLineToPoint(path, nil, offsetX+southwestOffset.x, offsetY+southwestOffset.y)
+    CGPathAddLineToPoint(path, nil, offsetX+southOffset.x, offsetY+southOffset.y)
+    CGPathAddLineToPoint(path, nil, offsetX+southeastOffset.x, offsetY+southeastOffset.y)
+    CGPathAddLineToPoint(path, nil, offsetX+northeastOffset.x, offsetY+northeastOffset.y)
+    CGPathAddLineToPoint(path, nil, offsetX+southOffset.x, offsetY+northOffset.y)
 
     return path
   }
