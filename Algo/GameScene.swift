@@ -15,6 +15,8 @@ class GameScene: SKScene {
         /* Setup your scene here */
         let generator: TerrainGenerator = MarkovTerrainGenerator()
         let map = generator.generate(25)
+
+        // START PATHS
 //        for path in map.paths(midPoint) {
 //            let randomColor = SKColor(
 //                red: CGFloat(arc4random_uniform(255))/CGFloat(255.0),
@@ -26,9 +28,14 @@ class GameScene: SKScene {
 //            tileShape.fillColor = randomColor
 //            self.addChild(tileShape)
 //        }
+        // END PATHS
+
+        // START SPRITES
         for sprite in map.sprites(midPoint) {
             self.addChild(sprite)
         }
+        // END SPRITES
+
 //        let end = NSDate()
 //        let timeInterval: Double = end.timeIntervalSinceDate(start)
 //        print("MAIN: Time to evaluate problem \(timeInterval) seconds")
