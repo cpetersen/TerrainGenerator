@@ -9,7 +9,7 @@
 import Foundation
 
 class Tile {
-  let height: CGFloat = 16
+  let height: CGFloat = 32
   var width: CGFloat { return (height*(sqrt(3.0)/2.0)) }
 
   var northOffset: CGPoint { return CGPoint(x: 0, y: (height/2.0)) }
@@ -19,15 +19,17 @@ class Tile {
   var northeastOffset: CGPoint { return CGPoint(x:  (width/2.0), y:  (height/4.0)) }
   var southeastOffset: CGPoint { return CGPoint(x:  (width/2.0), y: -(height/4.0)) }
 
-  var coordinate: Coordinate
+  let coordinate: Coordinate
+  let map: Map
   
-  init(coordinate: Coordinate) {
+  init(coordinate: Coordinate, map: Map) {
     self.coordinate = coordinate
+    self.map = map
   }
   
   func mapLocation() -> CGPoint {
-    let x: CGFloat = width*CGFloat(coordinate.row())
-    let y: CGFloat = height*CGFloat(coordinate.col())
+    let x: CGFloat = width*CGFloat(coordinate.col())+((width/CGFloat(2))*CGFloat(coordinate.row()%2))
+    let y: CGFloat = (height * CGFloat(0.75))*CGFloat(coordinate.row())
     return CGPoint(x:x,y:y)
   }
 
@@ -45,5 +47,16 @@ class Tile {
     CGPathAddLineToPoint(path, nil, offsetX+southOffset.x, offsetY+northOffset.y)
 
     return path
+  }
+
+  func neighbors() -> [Tile] {
+    var neighbors: [Tile] = []
+    for coordinate in self.coordinate.neighbors() {
+      let tile:Tile? = map.tile(coordinate)
+      if let tile = tile {
+        neighbors.append(tile)
+      }
+    }
+    return neighbors
   }
 }

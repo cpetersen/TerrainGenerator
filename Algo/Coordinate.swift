@@ -12,6 +12,10 @@ class Coordinate {
     let x: Int
     let y: Int
   
+    var hashValue: Int {
+        return x ^ y
+    }
+
     func z() -> Int {
         return -(x+y)
     };
@@ -40,9 +44,15 @@ class Coordinate {
         return z()
     }
 
-    
-    var hashValue: Int {
-        return x ^ y
+    func neighbors() -> [Coordinate] {
+        return [
+            Coordinate(x: self.x, y: self.y+1),
+            Coordinate(x: self.x, y: self.y-1),
+            Coordinate(x: self.x, z: self.z()+1),
+            Coordinate(x: self.x, z: self.z()+1),
+            Coordinate(y: self.y, z: self.z()+1),
+            Coordinate(y: self.y, z: self.z()+1)
+        ]
     }
 }
 

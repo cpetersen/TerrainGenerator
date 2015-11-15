@@ -17,11 +17,24 @@ class Map {
         for xIndex in -radius...radius {
             for yIndex in -radius...radius {
                 let coordinate = Coordinate(x: xIndex, y: yIndex)
-                let tile = Tile(coordinate: coordinate)
-                self.tiles[coordinate] = tile
+                if abs(coordinate.z()) <= 10 {
+                    let tile = Tile(coordinate: coordinate, map: self)
+                    self.tiles[coordinate] = tile
+                }
             }
+//            for zIndex in -radius...radius {
+//                let coordinate = Coordinate(x: xIndex, z: zIndex)
+//                if tiles[coordinate] == nil {
+//                    let tile = Tile(coordinate: coordinate)
+//                    self.tiles[coordinate] = tile
+//                }
+//            }
         }
         
+    }
+    
+    func tile(coordinate: Coordinate) -> Tile? {
+        return tiles[coordinate]
     }
     
     func paths(location: CGPoint) -> [CGMutablePathRef] {
