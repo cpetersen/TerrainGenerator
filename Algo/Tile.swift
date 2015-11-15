@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import SpriteKit
 
 class Tile {
-  let height: CGFloat = 32
+  let height: CGFloat = 64
   var width: CGFloat { return (height*(sqrt(3.0)/2.0)) }
 
   var northOffset: CGPoint { return CGPoint(x: 0, y: (height/2.0)) }
@@ -21,10 +22,12 @@ class Tile {
 
   let coordinate: Coordinate
   let map: Map
+  var type: Int
   
-  init(coordinate: Coordinate, map: Map) {
+  init(coordinate: Coordinate, map: Map, type: Int) {
     self.coordinate = coordinate
     self.map = map
+    self.type = type
   }
   
   func mapLocation() -> CGPoint {
@@ -47,6 +50,15 @@ class Tile {
     CGPathAddLineToPoint(path, nil, offsetX+southOffset.x, offsetY+northOffset.y)
 
     return path
+  }
+
+  func sprite(offset: CGPoint) -> SKSpriteNode {
+    let sprite = SKSpriteNode(imageNamed:"hex")
+    let offsetX: CGFloat = mapLocation().x + offset.x
+    let offsetY: CGFloat = mapLocation().y + offset.y
+    sprite.position = CGPoint(x: offsetX, y: offsetY)
+    sprite.setScale(CGFloat(height)/CGFloat(290))
+    return sprite
   }
 
   func neighbors() -> [Tile] {
