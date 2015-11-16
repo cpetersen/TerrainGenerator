@@ -13,8 +13,8 @@ class GameScene: SKScene {
 //        let start = NSDate()
         let midPoint = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         /* Setup your scene here */
-        let generator: TerrainGenerator = MarkovTerrainGenerator()
-        let map = generator.generate(25)
+        let generator: TerrainGenerator = RandonTerrainGenerator()
+        let map = Map(radius: 25, terrainGenerator: generator)
 
         // START PATHS
 //        for path in map.paths(midPoint) {
@@ -35,6 +35,16 @@ class GameScene: SKScene {
             self.addChild(sprite)
         }
         // END SPRITES
+
+/*
+        let tile = map.tile(Coordinate(x: 0, y: 0))!
+        let SIZE = CGSize(width: 800, height: 400)
+        let png = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(SIZE.width),
+            pixelsHigh: Int(SIZE.height), bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true,
+            isPlanar: false, colorSpaceName: NSDeviceRGBColorSpace, bytesPerRow: 0, bitsPerPixel: 0)
+        drawHexagonIntoBitmap(png!, path: tile.path(CGPoint(x: 0, y: 0)))
+        saveAsPNGWithName("/Users/christopherpetersen/hex.png",bitMap: png!)
+*/
 
 //        let end = NSDate()
 //        let timeInterval: Double = end.timeIntervalSinceDate(start)
@@ -61,7 +71,29 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        print("UPDATE")
 
     }
+
+/*
+    private func saveAsPNGWithName(fileName: String, bitMap: NSBitmapImageRep) -> Bool {
+        let props: [String:AnyObject] = [:]
+        let imageData = bitMap.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: props)
+        return imageData!.writeToFile(fileName, atomically: false)
+    }
+
+    private func drawHexagonIntoBitmap(bitmap: NSBitmapImageRep, path: CGMutablePathRef) {
+        let ctx = NSGraphicsContext(bitmapImageRep: bitmap)
+        NSGraphicsContext.setCurrentContext(ctx)
+        NSColor(red: 124 / 255, green: 252 / 255, blue: 0, alpha: 1.0).set()
+        let color = SKColor(
+            red: CGFloat(arc4random_uniform(255))/CGFloat(255.0),
+            green: CGFloat(arc4random_uniform(255))/CGFloat(255.0),
+            blue:  CGFloat(arc4random_uniform(255))/CGFloat(255.0),
+            alpha: 1.0
+        )
+        let shape:SKShapeNode = SKShapeNode(path: path)
+        shape.strokeColor = color
+        shape.fillColor = color
+    }
+*/
 }

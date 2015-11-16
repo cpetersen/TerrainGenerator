@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class Tile {
-  let height: CGFloat = 64
+  let height: CGFloat = 32
   var width: CGFloat { return (height*(sqrt(3.0)/2.0)) }
 
   var northOffset: CGPoint { return CGPoint(x: 0, y: (height/2.0)) }
@@ -23,13 +23,29 @@ class Tile {
   let coordinate: Coordinate
   let map: Map
   var type: Int
+  // -1 Undefined
+
+  // Water
+  // Sand
+  // Grass
+  // Stone
+  // Rock
+  // Lava
+  // Snow
   
   init(coordinate: Coordinate, map: Map, type: Int) {
     self.coordinate = coordinate
     self.map = map
     self.type = type
   }
-  
+
+  init(coordinate: Coordinate, map: Map, terrainGenerator: TerrainGenerator) {
+    self.coordinate = coordinate
+    self.map = map
+    self.type = -1
+    self.type = terrainGenerator.generate(self)
+  }
+
   func mapLocation() -> CGPoint {
     let x: CGFloat = width*CGFloat(coordinate.col())+((width/CGFloat(2))*CGFloat(coordinate.row()%2))
     let y: CGFloat = (height * CGFloat(0.75))*CGFloat(coordinate.row())
@@ -53,12 +69,25 @@ class Tile {
   }
 
   func sprite(offset: CGPoint) -> SKSpriteNode {
-    let sprite = SKSpriteNode(imageNamed:"hex")
+    let sprite = SKSpriteNode(imageNamed:spriteName())
     let offsetX: CGFloat = mapLocation().x + offset.x
     let offsetY: CGFloat = mapLocation().y + offset.y
     sprite.position = CGPoint(x: offsetX, y: offsetY)
-    sprite.setScale(CGFloat(height)/CGFloat(290))
+    sprite.setScale(CGFloat(height)/CGFloat(65))
     return sprite
+  }
+  
+  func spriteName() -> String {
+    switch(self.type) {
+    case 0:
+      return "water"
+    case 1:
+      return "grass"
+    case 2:
+      return "rock"
+    default:
+      return "sand"
+    }
   }
 
   func neighbors() -> [Tile] {

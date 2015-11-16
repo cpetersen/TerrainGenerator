@@ -13,14 +13,14 @@ class Map {
     let radius: Int
     var tiles = Dictionary<Coordinate, Tile>()
 
-    init(radius: Int) {
+    init(radius: Int, terrainGenerator: TerrainGenerator) {
 //        let start = NSDate()
         self.radius = radius
         for xIndex in -radius...radius {
             for yIndex in -radius...radius {
                 let coordinate = Coordinate(x: xIndex, y: yIndex)
                 if abs(coordinate.z()) <= radius {
-                    let tile = Tile(coordinate: coordinate, map: self, type: -1)
+                    let tile = Tile(coordinate: coordinate, map: self, terrainGenerator: terrainGenerator)
                     self.tiles[coordinate] = tile
                 }
             }
