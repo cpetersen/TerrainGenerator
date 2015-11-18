@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class Tile {
-  let height: CGFloat = 32
+  let height: CGFloat = 8
   var width: CGFloat { return (height*(sqrt(3.0)/2.0)) }
 
   var northOffset: CGPoint { return CGPoint(x: 0, y: (height/2.0)) }
@@ -73,7 +73,7 @@ class Tile {
     let offsetX: CGFloat = mapLocation().x + offset.x
     let offsetY: CGFloat = mapLocation().y + offset.y
     sprite.position = CGPoint(x: offsetX, y: offsetY)
-    sprite.setScale(CGFloat(height)/CGFloat(65))
+    sprite.setScale(CGFloat(height)/CGFloat(sprite.size.height-1))
     return sprite
   }
   

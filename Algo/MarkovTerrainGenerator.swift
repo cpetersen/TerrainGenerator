@@ -12,20 +12,30 @@ class MarkovTerrainGenerator: TerrainGenerator {
     // 0 water
     // 1 land
     // 2 mountain
-    let markovMatrix: [[Int]] = [
-        [80, 15,  5],
-        [10, 80, 10],
-        [ 5, 15, 80]
+    let markovMatrix: [[Float]] = [
+        [90.0,  2.0,  0.0],
+        [ 6.0, 90.0,  8.0],
+        [ 1.0, 30.0, 50.0]
     ]    
 
     func generate(tile: Tile) -> Int {
         var type = tile.type
         if(type == -1) {
-            var pool: [Int] = []
+            var weights: [Float]?
             for neighbor in tile.neighbors() {
-                if(neighbor.type != -1) {
-                    
+                if(neighbor.type>=0 && neighbor.type<markovMatrix.count) {
+                    if let w = weights {
+                        weights = w.addElements(markovMatrix[neighbor.type])
+                    } else {
+                        weights = markovMatrix[neighbor.type]
+                    }
+
                 }
+            }
+            if let w = weights {
+                type = w.weightedRandomIndex()
+            } else {
+                type = markovMatrix[Int(arc4random_uniform(UInt32(markovMatrix.count)))].weightedRandomIndex()
             }
         }
         return type

@@ -13,8 +13,14 @@ class GameScene: SKScene {
 //        let start = NSDate()
         let midPoint = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         /* Setup your scene here */
-        let generator: TerrainGenerator = RandonTerrainGenerator()
-        let map = Map(radius: 25, terrainGenerator: generator)
+        let markovGenerator: TerrainGenerator = MarkovTerrainGenerator()
+        let map = Map(radius: 50, terrainGenerator: markovGenerator)
+
+        // START SPRITES
+        for sprite in map.sprites(midPoint) {
+            self.addChild(sprite)
+        }
+        // END SPRITES
 
         // START PATHS
 //        for path in map.paths(midPoint) {
@@ -29,12 +35,6 @@ class GameScene: SKScene {
 //            self.addChild(tileShape)
 //        }
         // END PATHS
-
-        // START SPRITES
-        for sprite in map.sprites(midPoint) {
-            self.addChild(sprite)
-        }
-        // END SPRITES
 
 /*
         let tile = map.tile(Coordinate(x: 0, y: 0))!

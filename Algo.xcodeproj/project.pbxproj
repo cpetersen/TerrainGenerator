@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		533C1E4F1BF92C860011D71F /* RandomTerrainGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533C1E4E1BF92C860011D71F /* RandomTerrainGenerator.swift */; };
+		533C1E521BF9966B0011D71F /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533C1E511BF9966B0011D71F /* Matrix.swift */; };
+		533C1E541BFA4DCA0011D71F /* MatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533C1E531BFA4DCA0011D71F /* MatrixTests.swift */; };
 		536AFA951BE54FDD0091CDD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */; };
 		536AFA971BE54FDD0091CDD9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFA961BE54FDD0091CDD9 /* GameScene.swift */; };
 		536AFA991BE54FDD0091CDD9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 536AFA981BE54FDD0091CDD9 /* GameScene.sks */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		533C1E4E1BF92C860011D71F /* RandomTerrainGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTerrainGenerator.swift; sourceTree = "<group>"; };
+		533C1E511BF9966B0011D71F /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		533C1E531BFA4DCA0011D71F /* MatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixTests.swift; sourceTree = "<group>"; };
 		536AFA911BE54FDD0091CDD9 /* Algo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		536AFA961BE54FDD0091CDD9 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		533C1E501BF996510011D71F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				533C1E511BF9966B0011D71F /* Matrix.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		536AFA881BE54FDC0091CDD9 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				536AFA941BE54FDD0091CDD9 /* AppDelegate.swift */,
+				533C1E501BF996510011D71F /* Extensions */,
 				536AFAC41BE55CC90091CDD9 /* Map */,
 				536AFA961BE54FDD0091CDD9 /* GameScene.swift */,
 				536AFA981BE54FDD0091CDD9 /* GameScene.sks */,
@@ -125,6 +138,7 @@
 			children = (
 				536AFAA81BE54FDD0091CDD9 /* AlgoTests.swift */,
 				536AFAAA1BE54FDD0091CDD9 /* Info.plist */,
+				533C1E531BFA4DCA0011D71F /* MatrixTests.swift */,
 			);
 			path = AlgoTests;
 			sourceTree = "<group>";
@@ -284,6 +298,7 @@
 			files = (
 				538E1B0D1BF8426200078A22 /* MarkovTerrainGenerator.swift in Sources */,
 				536AFACA1BEFCAEC0091CDD9 /* Map.swift in Sources */,
+				533C1E521BF9966B0011D71F /* Matrix.swift in Sources */,
 				536AFAC61BE55CD90091CDD9 /* Tile.swift in Sources */,
 				536AFA971BE54FDD0091CDD9 /* GameScene.swift in Sources */,
 				533C1E4F1BF92C860011D71F /* RandomTerrainGenerator.swift in Sources */,
@@ -297,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533C1E541BFA4DCA0011D71F /* MatrixTests.swift in Sources */,
 				536AFAA91BE54FDD0091CDD9 /* AlgoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
