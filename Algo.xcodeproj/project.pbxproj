@@ -20,6 +20,8 @@
 		536AFAC61BE55CD90091CDD9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAC51BE55CD90091CDD9 /* Tile.swift */; };
 		536AFACA1BEFCAEC0091CDD9 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFAC91BEFCAEC0091CDD9 /* Map.swift */; };
 		536AFACC1BEFCBE30091CDD9 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536AFACB1BEFCBE30091CDD9 /* Coordinate.swift */; };
+		5384CA3B1BFD499200F09EDB /* PerlinNoiseTerrainGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384CA3A1BFD499200F09EDB /* PerlinNoiseTerrainGenerator.swift */; };
+		5384CA3D1BFD4AC500F09EDB /* FloatRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384CA3C1BFD4AC500F09EDB /* FloatRandom.swift */; };
 		538E1B0B1BF83FD100078A22 /* TerrainGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E1B0A1BF83FD100078A22 /* TerrainGenerator.swift */; };
 		538E1B0D1BF8426200078A22 /* MarkovTerrainGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538E1B0C1BF8426200078A22 /* MarkovTerrainGenerator.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		536AFAC51BE55CD90091CDD9 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; tabWidth = 2; };
 		536AFAC91BEFCAEC0091CDD9 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		536AFACB1BEFCBE30091CDD9 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		5384CA3A1BFD499200F09EDB /* PerlinNoiseTerrainGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerlinNoiseTerrainGenerator.swift; sourceTree = "<group>"; };
+		5384CA3C1BFD4AC500F09EDB /* FloatRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRandom.swift; sourceTree = "<group>"; };
 		538E1B0A1BF83FD100078A22 /* TerrainGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerrainGenerator.swift; sourceTree = "<group>"; };
 		538E1B0C1BF8426200078A22 /* MarkovTerrainGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkovTerrainGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				533C1E511BF9966B0011D71F /* Matrix.swift */,
+				5384CA3C1BFD4AC500F09EDB /* FloatRandom.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				536AFAC51BE55CD90091CDD9 /* Tile.swift */,
 				538E1B0A1BF83FD100078A22 /* TerrainGenerator.swift */,
 				538E1B0C1BF8426200078A22 /* MarkovTerrainGenerator.swift */,
+				5384CA3A1BFD499200F09EDB /* PerlinNoiseTerrainGenerator.swift */,
 				533C1E4E1BF92C860011D71F /* RandomTerrainGenerator.swift */,
 				536AFACB1BEFCBE30091CDD9 /* Coordinate.swift */,
 				536AFAC91BEFCAEC0091CDD9 /* Map.swift */,
@@ -300,8 +306,10 @@
 				536AFACA1BEFCAEC0091CDD9 /* Map.swift in Sources */,
 				533C1E521BF9966B0011D71F /* Matrix.swift in Sources */,
 				536AFAC61BE55CD90091CDD9 /* Tile.swift in Sources */,
+				5384CA3B1BFD499200F09EDB /* PerlinNoiseTerrainGenerator.swift in Sources */,
 				536AFA971BE54FDD0091CDD9 /* GameScene.swift in Sources */,
 				533C1E4F1BF92C860011D71F /* RandomTerrainGenerator.swift in Sources */,
+				5384CA3D1BFD4AC500F09EDB /* FloatRandom.swift in Sources */,
 				536AFA951BE54FDD0091CDD9 /* AppDelegate.swift in Sources */,
 				536AFACC1BEFCBE30091CDD9 /* Coordinate.swift in Sources */,
 				538E1B0B1BF83FD100078A22 /* TerrainGenerator.swift in Sources */,

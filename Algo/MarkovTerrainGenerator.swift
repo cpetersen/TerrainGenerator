@@ -13,9 +13,9 @@ class MarkovTerrainGenerator: TerrainGenerator {
     // 1 land
     // 2 mountain
     let markovMatrix: [[Float]] = [
-        [90.0,  2.0,  0.0],
-        [ 6.0, 90.0,  8.0],
-        [ 1.0, 30.0, 50.0]
+        [90.0,  1.0,  0.0],
+        [ 1.0, 90.0,  5.0],
+        [ 0.0, 30.0, 50.0]
     ]    
 
     func generate(tile: Tile) -> Int {
@@ -29,7 +29,6 @@ class MarkovTerrainGenerator: TerrainGenerator {
                     } else {
                         weights = markovMatrix[neighbor.type]
                     }
-
                 }
             }
             if let w = weights {

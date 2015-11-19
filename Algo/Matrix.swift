@@ -24,7 +24,7 @@ extension CollectionType where Generator.Element == Float {
     }
     
     func weightedRandomIndex() -> Int {
-        let randomValue: Float = randomBetweenNumbers(0, secondNum: sum())
+        let randomValue: Float = Float.random(sum())
         var counter: Float = 0
         var returnVal: Int = 0
         for (index, value) in self.enumerate() {
@@ -36,8 +36,4 @@ extension CollectionType where Generator.Element == Float {
         }
         return returnVal
     }
-}
-
-func randomBetweenNumbers(firstNum: Float, secondNum: Float) -> Float{
-    return Float(arc4random()) / Float(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
 }

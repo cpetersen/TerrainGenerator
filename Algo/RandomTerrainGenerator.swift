@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RandonTerrainGenerator: TerrainGenerator {
+class RandomTerrainGenerator: TerrainGenerator {
     func generate(tile: Tile) -> Int {
         var type = tile.type
         if(type == -1) {

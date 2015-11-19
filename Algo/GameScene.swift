@@ -13,8 +13,10 @@ class GameScene: SKScene {
 //        let start = NSDate()
         let midPoint = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         /* Setup your scene here */
-        let markovGenerator: TerrainGenerator = MarkovTerrainGenerator()
-        let map = Map(radius: 50, terrainGenerator: markovGenerator)
+//        let terrainGenerator: TerrainGenerator = RandomTerrainGenerator()
+//        let terrainGenerator: TerrainGenerator = MarkovTerrainGenerator()
+        let terrainGenerator: TerrainGenerator = PerlinNoiseTerrainGenerator(height: 100, width: 100, octaves: 5)
+        let map = Map(radius: 50, terrainGenerator: terrainGenerator)
 
         // START SPRITES
         for sprite in map.sprites(midPoint) {

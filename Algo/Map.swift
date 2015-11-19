@@ -16,8 +16,8 @@ class Map {
     init(radius: Int, terrainGenerator: TerrainGenerator) {
 //        let start = NSDate()
         self.radius = radius
-        for xIndex in -radius...radius {
-            for yIndex in -radius...radius {
+        for yIndex in -radius...radius {
+            for xIndex in -radius...radius {
                 let coordinate = Coordinate(x: xIndex, y: yIndex)
                 if abs(coordinate.z()) <= radius {
                     let tile = Tile(coordinate: coordinate, map: self, terrainGenerator: terrainGenerator)
