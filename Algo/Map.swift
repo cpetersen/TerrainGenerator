@@ -41,5 +41,9 @@ class Map {
     func sprites(location: CGPoint) -> [SKSpriteNode] {
         return tiles.map( { $1.sprite(location) } )
     }
+
+    func sprites(location: CGPoint, height: CGFloat) -> [SKSpriteNode] {
+        return tiles.map( { $1.sprite(location, height: height) } )
+    }
 }
 

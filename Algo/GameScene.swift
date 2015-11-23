@@ -8,7 +8,10 @@
 
 import SpriteKit
 
+
 class GameScene: SKScene {
+    var tileHeight: CGFloat = 32
+    
     override func didMoveToView(view: SKView) {
 //        let start = NSDate()
         let midPoint = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
@@ -19,7 +22,7 @@ class GameScene: SKScene {
         let map = Map(radius: 50, terrainGenerator: terrainGenerator)
 
         // START SPRITES
-        for sprite in map.sprites(midPoint) {
+        for sprite in map.sprites(midPoint, height: tileHeight) {
             self.addChild(sprite)
         }
         // END SPRITES
@@ -53,7 +56,8 @@ class GameScene: SKScene {
 //        print("MAIN: Time to evaluate problem \(timeInterval) seconds")
     }
     
-//    override func mouseDown(theEvent: NSEvent) {
+    override func mouseDown(theEvent: NSEvent) {
+        print("MOUSE DOWN")
 //        let location = theEvent.locationInNode(self)
 //        
 //    //        let sprite = SKSpriteNode(imageNamed:"Spaceship")
@@ -69,13 +73,57 @@ class GameScene: SKScene {
 //        let myNode:SKShapeNode = SKShapeNode(path: tile.path(location))
 //
 //        self.addChild(myNode)
-//    }
-    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-
     }
 
+    override func keyDown(theEvent: NSEvent) {
+        switch(theEvent.keyCode) {
+        case 126: // Up
+            print("Up")
+        case 124: // Right
+            print("Right")
+        case 125: // Down
+            print("Down")
+        case 123: // Left
+            print("Left")
+        case 24: // Plus
+            tileHeight += 8.0
+            print("Zoom In \(tileHeight)")
+            for sprite in self.children {
+                sprite.setScale(CGFloat(tileHeight)/CGFloat(95))
+            }
+        case 27: // Minus
+            tileHeight -= 8.0
+            print("Zoom Out \(tileHeight)")
+            for sprite in self.children {
+                sprite.setScale(CGFloat(tileHeight)/CGFloat(95))
+            }
+        default:
+            true
+        }
+    }
+
+
+    override func scrollWheel(theEvent: NSEvent) {
+        //        let location = theEvent.locationInNode(self)
+        print("SCROLL")
+    }
+
+    override func magnifyWithEvent(theEvent: NSEvent) {
+        //        let location = theEvent.locationInNode(self)
+        print("MAGNIFY")
+    }
+
+    override func smartMagnifyWithEvent(theEvent: NSEvent) {
+        //        let location = theEvent.locationInNode(self)
+        print("SMART MAGNIFY")
+    }
+
+    override func update(currentTime: CFTimeInterval) {
+        /* Called before each frame is rendered */
+        
+    }
+
+    
 /*
     private func saveAsPNGWithName(fileName: String, bitMap: NSBitmapImageRep) -> Bool {
         let props: [String:AnyObject] = [:]

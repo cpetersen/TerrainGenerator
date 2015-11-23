@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class Tile {
-  let height: CGFloat = 8
+  var height: CGFloat = 8
   var width: CGFloat { return (height*(sqrt(3.0)/2.0)) }
 
   var northOffset: CGPoint { return CGPoint(x: 0, y: (height/2.0)) }
@@ -34,6 +34,7 @@ class Tile {
   // Snow
   
   init(coordinate: Coordinate, map: Map, type: Int) {
+    self.height = 32
     self.coordinate = coordinate
     self.map = map
     self.type = type
@@ -69,14 +70,20 @@ class Tile {
   }
 
   func sprite(offset: CGPoint) -> SKSpriteNode {
-    let sprite = SKSpriteNode(imageNamed:spriteName())
+    return sprite(offset, height: self.height)
+  }
+
+  func sprite(offset: CGPoint, height: CGFloat) -> SKSpriteNode {
+//    let sprite = SKSpriteNode(imageNamed:spriteName())
+    let sprite = SKSpriteNode()
+    sprite.imageNamed = spriteName
     let offsetX: CGFloat = mapLocation().x + offset.x
     let offsetY: CGFloat = mapLocation().y + offset.y
     sprite.position = CGPoint(x: offsetX, y: offsetY)
     sprite.setScale(CGFloat(height)/CGFloat(sprite.size.height-1))
     return sprite
   }
-  
+
   func spriteName() -> String {
     switch(self.type) {
     case 0:
