@@ -74,9 +74,9 @@ class Tile {
   }
 
   func sprite(offset: CGPoint, height: CGFloat) -> SKSpriteNode {
-//    let sprite = SKSpriteNode(imageNamed:spriteName())
-    let sprite = SKSpriteNode()
-    sprite.imageNamed = spriteName
+    let sprite = SKSpriteNode(imageNamed:spriteName())
+//    let sprite = SKSpriteNode()
+//    sprite.imageNamed = spriteName
     let offsetX: CGFloat = mapLocation().x + offset.x
     let offsetY: CGFloat = mapLocation().y + offset.y
     sprite.position = CGPoint(x: offsetX, y: offsetY)
