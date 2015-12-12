@@ -10,14 +10,9 @@ import Foundation
 
 // http://devmag.org.za/2009/04/25/perlin-noise/
 class PerlinNoiseTerrainGenerator: TerrainGenerator {
-//    let height: Int
-//    let width: Int
-//    var baseNoise: [[Float]]
     var perlinNoise: [[Float]]
     
     init(height: Int, width: Int, octaves: Int) {
-//        self.height = height
-//        self.width = width
         var baseNoise: [[Float]] = Array(count:height, repeatedValue:[Float](count: width, repeatedValue: 0.0))
 
         for row in 0..<height {
@@ -106,7 +101,6 @@ class PerlinNoiseTerrainGenerator: TerrainGenerator {
     func generate(coordinate: Coordinate) -> Int {
         let width: Int = perlinNoise.count
         let height: Int = perlinNoise[0].count
-//        let val: Float = perlinNoise[abs(coordinate.col())%width][abs(coordinate.row())%height]
         let val: Float = perlinNoise[abs(coordinate.x)%width][abs(coordinate.y)%height]
         switch(val) {
         case (0...water):

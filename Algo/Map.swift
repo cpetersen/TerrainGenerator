@@ -16,7 +16,6 @@ class Map {
     var height: CGFloat = 32
     
     init(radius: Int, terrainGenerator: TerrainGenerator) {
-//        let start = NSDate()
         self.radius = radius
         for yIndex in -radius...radius {
             for xIndex in -radius...radius {
@@ -27,9 +26,6 @@ class Map {
                 }
             }
         }
-//        let end = NSDate()
-//        let timeInterval: Double = end.timeIntervalSinceDate(start)
-//        print("Time to evaluate problem \(timeInterval) seconds")
     }
     
     func tile(coordinate: Coordinate) -> Tile? {
@@ -58,16 +54,4 @@ class Map {
             }
         }
     }
-//    func paths(location: CGPoint) -> [CGMutablePathRef] {
-//        return tiles.map( { $1.path(location) } )
-//    }
-
-//    func sprites(location: CGPoint) -> [SKSpriteNode] {
-//        return tiles.map( { $1.sprite(location) } )
-//    }
-//
-//    func sprites(location: CGPoint, height: CGFloat) -> [SKSpriteNode] {
-//        return tiles.map( { $1.sprite(location, height: height) } )
-//    }
 }
-
