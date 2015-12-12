@@ -101,14 +101,13 @@ class PerlinNoiseTerrainGenerator: TerrainGenerator {
         return localPerlinNoise
     }
 
-
     let water: Float = 0.5
     let land: Float = 0.8
-    func generate(tile: Tile) -> Int {
+    func generate(coordinate: Coordinate) -> Int {
         let width: Int = perlinNoise.count
         let height: Int = perlinNoise[0].count
-//        let val: Float = perlinNoise[abs(tile.coordinate.col())%width][abs(tile.coordinate.row())%height]
-        let val: Float = perlinNoise[abs(tile.coordinate.x)%width][abs(tile.coordinate.y)%height]
+//        let val: Float = perlinNoise[abs(coordinate.col())%width][abs(coordinate.row())%height]
+        let val: Float = perlinNoise[abs(coordinate.x)%width][abs(coordinate.y)%height]
         switch(val) {
         case (0...water):
             return 0

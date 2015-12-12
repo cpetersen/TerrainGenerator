@@ -9,5 +9,5 @@
 import Foundation
 
 protocol TerrainGenerator {
-    func generate(tile: Tile) -> Int
+    func generate(coordinate: Coordinate) -> Int
 }

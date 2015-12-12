@@ -17,25 +17,28 @@ class MarkovTerrainGenerator: TerrainGenerator {
         [ 1.0, 90.0,  5.0],
         [ 0.0, 30.0, 50.0]
     ]    
-
-    func generate(tile: Tile) -> Int {
-        var type = tile.type
-        if(type == -1) {
-            var weights: [Float]?
-            for neighbor in tile.neighbors() {
-                if(neighbor.type>=0 && neighbor.type<markovMatrix.count) {
-                    if let w = weights {
-                        weights = w.addElements(markovMatrix[neighbor.type])
-                    } else {
-                        weights = markovMatrix[neighbor.type]
-                    }
+    let map: Map;
+    
+    init(map: Map) {
+        self.map = map
+    }
+    
+    func generate(coordinate: Coordinate) -> Int {
+        var type = -1
+        var weights: [Float]?
+        for neighbor in self.map.neighbors(coordinate) {
+            if(neighbor.type>=0 && neighbor.type<markovMatrix.count) {
+                if let w = weights {
+                    weights = w.addElements(markovMatrix[neighbor.type])
+                } else {
+                    weights = markovMatrix[neighbor.type]
                 }
             }
-            if let w = weights {
-                type = w.weightedRandomIndex()
-            } else {
-                type = markovMatrix[Int(arc4random_uniform(UInt32(markovMatrix.count)))].weightedRandomIndex()
-            }
+        }
+        if let w = weights {
+            type = w.weightedRandomIndex()
+        } else {
+            type = markovMatrix[Int(arc4random_uniform(UInt32(markovMatrix.count)))].weightedRandomIndex()
         }
         return type
     }

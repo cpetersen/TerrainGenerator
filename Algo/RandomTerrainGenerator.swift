@@ -9,11 +9,7 @@
 import Foundation
 
 class RandomTerrainGenerator: TerrainGenerator {
-    func generate(tile: Tile) -> Int {
-        var type = tile.type
-        if(type == -1) {
-            type = Int(arc4random_uniform(3))
-        }
-        return type
+    func generate(coordinate: Coordinate) -> Int {
+        return Int(arc4random_uniform(3))
     }
 }
